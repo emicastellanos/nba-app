@@ -1,0 +1,9 @@
+.header {
+  background: #242424;
+  border-bottom: 1px solido #000000
+
+}
+
+.headerOpt {
+  display: flex;
+}
