@@ -10,19 +10,13 @@ const SideNavItems = () => {
   const items = [
     {
       type: style.option,
-      icon: 'sign-out',
-      text: 'Sign-out',
-      link: '/sign-out'
-    },
-    {
-      type: style.option,
       icon: 'home',
       text: 'Home',
       link: '/'
     },
     {
       type: style.option,
-      icon: 'file-text-o',
+      icon: 'file-alt',
       text: 'News',
       link: '/news'
     },
@@ -34,9 +28,15 @@ const SideNavItems = () => {
     },
     {
       type: style.option,
-      icon: 'sign-in',
+      icon: 'sign-in-alt',
       text: 'Sign-in',
       link: '/sign-in'
+    },
+    {
+      type: style.option,
+      icon: 'sign-out-alt',
+      text: 'Sign-out',
+      link: '/sign-out'
     }
     
   ]

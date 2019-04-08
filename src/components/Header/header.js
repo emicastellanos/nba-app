@@ -8,6 +8,8 @@ import SideNav from './SideNav/sideNav';
 
 const Header = (props) => {
 
+  /* le pasamos color gris y otras cosas.  ese bars son las tres rayitas del navbar que usamos de fontaweosme
+   */
   const navBars = () => (
     <div className={style.bars}>
       <FontAwesome name="bars" 
@@ -19,14 +21,15 @@ const Header = (props) => {
         }}
       />
     </div>
-  ) //lo defino directamente asi porque vamos a devolver jsx (?)
+  ) //lo defino directamente asi, sin usar llave porque vamos a devolver jsx (?)
 
   /* const logo = () => {
     return (
       <Link to='/' className={style.logo}>
         <img alt="nba logo" src='/images/nba_logo.png'/>
       </Link>
-    ) pero usamos la forma de abajo que es mas cool*/
+    ) pero usamos la forma de abajo que es mas cool 
+    */
   const logo = () => (
     <Link to='/' className={style.logo}> 
       <img alt="nba logo" src='/images/nba_logo.png'/>
