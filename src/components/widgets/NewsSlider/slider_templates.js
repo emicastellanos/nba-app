@@ -15,7 +15,8 @@ const SliderTemplates = props => {
     arrows:false,
     speed:500,
     slidesToShow:1,
-    slidesToScroll:1
+    slidesToScroll:1,
+    ...props.settings //with ES6 we could do this and add a few settings from the props and the settings inside sliderTemplates could be considered as default settings
   }
 
   switch(props.type) {
