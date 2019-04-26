@@ -4,10 +4,12 @@ import {Link} from 'react-router-dom';
 import styles from './newsList.css';
 import axios from 'axios';
 import Button from '../Buttons/buttons';
+import CardInfo from '../CardInfo/cardInfo';
 import {URL} from '../../../config';
 
 class NewsList extends Component {
   state = {
+    teams:[],
     items:[],
     start: this.props.start,
     end: this.props.start + this.props.amount,
@@ -18,7 +20,16 @@ class NewsList extends Component {
     this.request(this.state.start, this.state.end)
   }
 
-  request = (start,end) => {
+  request = (start, end) => {
+
+    if(this.state.teams.length < 1){
+      axios.get(`${URL}/teams`)
+        .then( (response) => {
+          this.setState({teams: response.data});
+        })
+    }
+
+
     axios.get(`${URL}/articles?_start=${start}&_end=${end}`)
     .then( response => {
       this.setState({
@@ -47,9 +58,12 @@ class NewsList extends Component {
           >
             <div>
               <div className={styles.newslist_item}>
-              <Link to={`/articles/${item.id}`}>
-                <h2>{item.title}</h2>
-              </Link>
+                
+                <Link to={`/articles/${item.id}`}>
+                  <CardInfo teams={this.state.teams} team={item.team} date={item.date}/>
+                  <h2>{item.title}</h2>
+                </Link>
+              
               </div>
             </div>
           </CSSTransition>
@@ -63,6 +77,7 @@ class NewsList extends Component {
   }
 
   render (){
+    console.log(this.state.teams);
     return (
       <div>
         <TransitionGroup
