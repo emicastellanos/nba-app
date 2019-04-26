@@ -6,7 +6,6 @@ import NewsList from '../widgets/NewsList/newsList';
 const Home = () => {
   return (
     <div>
-      home
       <NewsSlider 
         type="featured" 
         start={0} 
