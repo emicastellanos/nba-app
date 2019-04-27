@@ -22,7 +22,7 @@ const buttons = (props) => {
         template = (
           <Link to={props.linkTo}
             className={styles.blue_btn}
-            onClick={props.loadMore}>
+          >
             {props.cta}
           </Link>
         );

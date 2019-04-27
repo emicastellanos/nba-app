@@ -79,7 +79,7 @@ class NewsList extends Component {
   }
 
   render (){
-    console.log('start ',this.state.start,' and end ', this.state.end)
+    
     return (
       <div>
         <TransitionGroup
