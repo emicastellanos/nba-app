@@ -33,7 +33,9 @@ class NewsList extends Component {
     axios.get(`${URL}/articles?_start=${start}&_end=${end}`)
     .then( response => {
       this.setState({
-        items:[...this.state.items, ...response.data]
+        items:[...this.state.items, ...response.data],
+        start:start,
+        end:end
       })
     })
   }
@@ -77,7 +79,7 @@ class NewsList extends Component {
   }
 
   render (){
-    console.log(this.state.teams);
+    console.log('start ',this.state.start,' and end ', this.state.end)
     return (
       <div>
         <TransitionGroup

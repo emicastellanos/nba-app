@@ -1,0 +1,38 @@
+.videoList_wrapper {
+  text-align: center;
+  /* margin: 20px; */
+  color: #353535;
+  font-weight: 300;
+  font-size: 21px;
+  
+}
+
+/* this is a flex container, thats why  the display flex is setted*/
+.videoListItem_wrapper {
+  display: flex;
+  border-bottom: 2px solid #d5d5d5;
+  background: #fff;
+}
+
+.videoListItem_wrapper h2{
+  font-size: 13px;
+  color: #525252;
+}
+
+.left {
+  background-size: cover !important;
+}
+
+.left div {
+  width: 90px;
+  height: 90px;
+  background-size: 40px;
+  /* background-repeat: no-repeat !important; using no-repeat in line with background we avoid the usage of !important*/ 
+  /* background-position: center !important; and also this line*/
+  background: url('/images/play.png') no-repeat center;
+}
+
+.right {
+  flex-grow: 1;
+  padding: 10px; 
+}
