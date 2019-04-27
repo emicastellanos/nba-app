@@ -40,7 +40,19 @@ class NewsArticles extends Component {
             date={article.date}
             author={article.author}
         />
-        
+        {/* ALL THE BODY DONE HERE INSTEAD ON A PARTICULAR COMPONENT THAT WE'LL NEVER REUSE */}
+        <div className={styles.articleBody}>
+          <h1>{article.title}</h1>
+          <div className={styles.articleImage}
+            style={{
+              background:`url('/images/articles/${article.image}')`
+            }}
+          >
+          </div>
+          <div className={styles.articleText}>
+            {article.body}
+          </div>
+        </div>
 
       </div>
     );
