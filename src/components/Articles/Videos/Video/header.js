@@ -2,6 +2,7 @@ import React from 'react'
 import TeamNfo from '../../Elements/teamNfo';
 
 const header = (props) => {
+  
   const teamNfo = (team) =>{
     return team ? (
       <TeamNfo team={team}/>
@@ -10,7 +11,7 @@ const header = (props) => {
 
   return (
     <div>
-      {TeamNfo(props.teamData)}
+      {teamNfo(props.teamData)}
     </div>
 
   )

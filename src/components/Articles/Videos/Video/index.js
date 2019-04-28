@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import styles from 'articles.css';
+import styles from '../../../Articles/articles.css';
 import {URL} from '../../../../config';
 import Header from './header.js';
 
@@ -14,7 +14,6 @@ export default class index extends Component {
     axios.get(`${URL}/articles?id=${this.props.match.params.id}`)
     .then( response => {
       let article = response.data[0];
-
       axios.get(`${URL}/teams?id=${article.team}`)
       .then( response => {
         this.setState({
