@@ -12,7 +12,6 @@ const postData = (props) => {
         Author:
         <span>{props.data.author}</span>
       </div>
-      
     </div>
   )
 }

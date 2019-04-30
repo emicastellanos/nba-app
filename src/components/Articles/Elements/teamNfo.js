@@ -12,7 +12,7 @@ const TeamNfo = (props) => {
       </div>
       <div className={styles.right}>
         <div>
-          <span>{props.team.city} {props.team.city}</span>
+          <span>{props.team.city} {props.team.name}</span>
         </div>
         <div>
           <strong>

@@ -16,6 +16,7 @@ class NewsArticles extends Component {
   componentWillMount(){
     axios.get(`${URL}/articles?id=${this.props.match.params.id}`)
     .then( response => {
+      console.log('news articles: ', response);
       let article = response.data[0];
 
       axios.get(`${URL}/teams?id=${article.team}`)
@@ -25,7 +26,6 @@ class NewsArticles extends Component {
           team:response.data
         })
       })
- 
     })
   }
 
